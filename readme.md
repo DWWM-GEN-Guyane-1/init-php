@@ -2,32 +2,35 @@
 
 Énoncé du brief
 
- Créer une page d’authentification contenant un champ login
-et un champ mot de passe. Les utilisateurs sont stockés dans un tableau. Chaque
+1- Créer une page d’authentification contenant un champ login et un champ mot de passe.-- FAIT 
+2- Les utilisateurs sont stockés dans un tableau. Chaque
 utilisateur est caractérisé par un nom, un login et un mot de passe. 
 
-Une fois que l’utilisateur s’est authentifié on le redirige
+3- Une fois que l’utilisateur s’est authentifié on le redirige
 vers une page d’accueil qui contient des liens vers les pages suivantes : 
 
 - listerProduits.php :
-affiche une liste de produits. 
+affiche une liste de produits
 
-- rechercherProduits.php : affiche une liste de produits
-à partir d’un seuil de quantité saisi par l’utilisateur. 
+- rechercherProduits.php : 
+affiche une liste de produits à partir d’un seuil de quantité saisi par l’utilisateur
 
-- ajouterProduit.php : ajoute à la volé un produit au
-tableau de produits et affiche les produits en bas du formulaire d’ajout 
+- ajouterProduit.php : 
+ajoute à la volé un produit au tableau de produits et 
+affiche les produits en bas du formulaire d’ajout
 
-- updateProduit.php : modifie à la volé un produit au
-tableau de produits et affiche les produits en bas du formulaire de modification 
+- updateProduit.php : 
+modifie à la volé un produit au tableau de produits et 
+affiche les produits en bas du formulaire de modification 
 
-- supprimerProduit.php : supprimer à la volé un produit du
-tableau de produits et affiche les produits en bas du formulaire de suppression 
+- supprimerProduit.php : 
+supprimer à la volé un produit du tableau de produits et 
+affiche les produits en bas du formulaire de suppression 
 
-NB : Les produits sont stockés dans un tableau. Chaque produit
-est caractérisé par un nom, un prix unitaire et une quantité en stock. (Infos à
-afficher : nom, prix quantité et montant) 
+NB : Les produits sont stockés dans un tableau. 
+Chaque produit est caractérisé par un nom, un prix unitaire et une quantité en stock. 
+(Infos à afficher : nom, prix quantité et montant) 
 
-Deux produits ne peuvent pas avoir le même nom, les prix
-sont >= 50, la quantité est strictement positif. Les produits dont la quantité est inférieure à 10 sont
+Deux produits ne peuvent pas avoir le même nom, les prix sont >= 50
+la quantité est strictement positif. Les produits dont la quantité est inférieure à 10 sont
 affichés en rouge. 

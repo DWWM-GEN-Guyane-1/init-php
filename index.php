@@ -1,3 +1,16 @@
+<?php
+session_start();
+$errorMsg = "";
+$validUser = $_SESSION["login"] === true;
+if(isset($_POST["sub"])) {
+  $validUser = $_POST["username"] == "admin" && $_POST["password"] == "password";
+  if(!$validUser) $errorMsg = "Utilisateur ou mot de passe incorrect";
+  else $_SESSION["login"] = true;
+}
+if($validUser) {
+   header("Location: /login-success.php"); die();
+}
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,12 +35,6 @@
 
             <input type="submit" id='submit' value='LOGIN'>
 
-            <?php
-            if(isset($_GET['erreur'])){
-                $err = $_GET['erreur'];
-                if($err==1 || $err==2)
-                    echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";}
-            ?>
         </form>
     </div>
 </body>
