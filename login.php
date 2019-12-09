@@ -1,16 +1,16 @@
-<?php session_start(); /* Starts the session */
-/* Check Login form submitted */if(isset($_POST['Submit'])){
-/* Define username and associated password array */$logins = array('Tia' => '123456','Loucky' => '123456','Kath' => '123456');
+<?php session_start(); /* Démarre la session */
+/* Vérifier le formulaire de connexion soumis */if(isset($_POST['Submit'])){
+/* Définir le nom d'utilisateur et le tableau de mots de passe associé */$logins = array('Tia' => '123456','Loucky' => '123456','Kath' => '123456');
 
-/* Check and assign submitted Username and Password to new variable */$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
+/* Vérifier et attribuer le nom d'utilisateur et le mot de passe soumis à la nouvelle variable */$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
 $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
-/* Check Username and Password existence in defined array */if (isset($logins[$Username]) && $logins[$Username] == $Password){
-/* Success: Set session variables and redirect to Protected page  */$_SESSION['UserData']['Username']=$logins[$Username];
+/* Vérifier l'existence du nom d'utilisateur et du mot de passe dans un tableau défini */if (isset($logins[$Username]) && $logins[$Username] == $Password){
+/* Success: définir des variables de session et rediriger vers la page protégée */$_SESSION['UserData']['Username']=$logins[$Username];
 header("location:index.php".$_GET['user'].'&pass='.$_GET['pass']);
 exit;
 } else {
-/*Unsuccessful attempt: Set error message */$msg="<span style='color:red'>Invalid Login Details</span>";
+/*Échec de la tentative: définir le message d'erreur */$msg="<span style='color:red'>Identifiants incorrects</span>";
 }
 }
 
