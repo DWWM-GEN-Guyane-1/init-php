@@ -34,3 +34,9 @@ Chaque produit est caractérisé par un nom, un prix unitaire et une quantité e
 Deux produits ne peuvent pas avoir le même nom, les prix sont >= 50
 la quantité est strictement positif. Les produits dont la quantité est inférieure à 10 sont
 affichés en rouge. 
+
+=> Identifiants prédéfinis <=
+
+Tia -> 123456
+Loucky -> 123456
+Kath -> 123456
