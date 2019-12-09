@@ -7,7 +7,8 @@ $Password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
 /* Vérifier l'existence du nom d'utilisateur et du mot de passe dans un tableau défini */if (isset($logins[$Username]) && $logins[$Username] == $Password){
 /* Success: définir des variables de session et rediriger vers la page protégée */$_SESSION['UserData']['Username']=$logins[$Username];
-header("location:index.php".$_GET['user'].'&pass='.$_GET['pass']);
+header("location:accueil.php");
+
 exit;
 } else {
 /*Échec de la tentative: définir le message d'erreur */$msg="<span style='color:red'>Identifiants incorrects</span>";
@@ -26,8 +27,9 @@ exit;
     <link rel="stylesheet" href="style.css" media="screen" type="text/css">
 </head>
 <body>
+<!-- Formulaire -->
 <div id="container">
-<form action="" method="post" name="Login_Form">
+<form action="accueil.php" method="post" name="Login_Form">
   <table width="400" border="0" align="center" cellpadding="5" cellspacing="1" class="Table">
     <?php if(isset($msg)){?>
     <tr>
