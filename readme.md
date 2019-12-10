@@ -10,7 +10,7 @@ utilisateur est caractérisé par un nom, un login et un mot de passe. -- FAIT
 vers une page d’accueil qui contient des liens vers les pages suivantes : -- FAIT
 
 - listerProduits.php :
-affiche une liste de produits
+affiche une liste de produits -- FAIT
 
 - rechercherProduits.php : 
 affiche une liste de produits à partir d’un seuil de quantité saisi par l’utilisateur
