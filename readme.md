@@ -29,7 +29,7 @@ affiche les produits en bas du formulaire de suppression
 
 NB : Les produits sont stockés dans un tableau. 
 Chaque produit est caractérisé par un nom, un prix unitaire et une quantité en stock. 
-(Infos à afficher : nom, prix, quantité et montant) 
+(Infos à afficher : nom, prix unitaire, quantité et montant) 
 
 Deux produits ne peuvent pas avoir le même nom, les prix sont >= 50
 la quantité est strictement positif. Les produits dont la quantité est inférieure à 10 sont
